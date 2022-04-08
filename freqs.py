@@ -36,7 +36,7 @@ for D in ['D1','D2a','D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13'
         <DIV style="float:left;" > <IMG src='{img_file}'> </DIV>
         <div style="clear:both;"></div> 
     ''')
-    labels_ = freqs.keys().tolist()
+
     plt.figure()
 
     freqs.loc[~freqs.index.isin(['Non risponde'])].plot.pie(y='#',textprops={'size': 'smaller'},autopct='%1.1f%%', shadow=True)
@@ -44,7 +44,7 @@ for D in ['D1','D2a','D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13'
     plt.savefig(f'./public/{img_file}')
     plt.close()
 
-    with open(f'./public/Frequenze.html','w') as f:
+    with open(f'./public/ Frequenze.html','w') as f:
         styles = '''
         table.dataframe > tbody > tr > th {
             text-align: left;
@@ -86,6 +86,9 @@ for D in ['D1','D2a','D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13'
 
         </head>
         <body>
+            <div>Frequenze semplici delle risposte alle domande del questionario</div>
+            <div>(Nei grafici sono escluse le mancate risposte)</div>
+            <HR>
             {'<HR>'.join(tables_html)}
         </body>
         </html>

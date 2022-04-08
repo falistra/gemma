@@ -109,18 +109,18 @@ risposte = {
         pd.NA:"Non risponde"
     },
     'D6':   {
-        1:"1.Maschio",
-        2:"2.Femmina",
-        3:"2.Femmina",
+        1:"Maschio",
+        2:"Femmina",
+        3:"Femmina",
         "All":'Totale', 
         pd.NA:"Non risponde"
     },
     'D7':   {
-        1:"1.Meno di 18",
-        2:"2.Tra 18 e 30",
-        3:"3.Tra 31 e 45",
-        4:"4.Tra 46 e 65",
-        5:"5.Più di 65",
+        1:"Meno di 18",
+        2:"Tra 18 e 30",
+        3:"Tra 31 e 45",
+        4:"Tra 46 e 65",
+        5:"Più di 65",
         "All":'Totale',
         pd.NA:"Non risponde"
     }, 
@@ -137,6 +137,151 @@ risposte = {
     2:'Da 30 minuti a 1 ora',
     3:'Da 1 a 2 ore',
     4:'Più di 2 ore',
+    pd.NA:"Non risponde"  
+    },
+    'D10' : {
+    1:'Per niente',
+    2:'Poco',
+    3:'Abbastanza',
+    4:'Molto',
+    pd.NA:"Non risponde"
+    },
+    'D11': {
+    1:'Per niente',
+    2:'Poco',
+    3:'Abbastanza',
+    4:'Molto',
+    pd.NA:"Non risponde"
+    },
+    'D12': {
+    1:'Per niente',
+    2:'Poco',
+    3:'Abbastanza',
+    4:'Molto',
+    pd.NA:"Non risponde"
+    },
+    'D13': {
+    1:'Per niente',
+    2:'Poco',
+    3:'Abbastanza',
+    4:'Molto',
+    pd.NA:"Non risponde"
+    }
+}
+
+risposte_short = {
+    'D1':   {1:"Sì",2:"No","All":'Totale', pd.NA:"Non risponde"},
+    'D2a' : {
+        1:'figli',
+        2: 'amici/parenti',
+        3: 'Internet',
+        4: 'pieghevole',
+        5: 'giornale',
+        6: 'radio/TV ',
+        7: 'casualmente',
+        8: 'conoscevo',
+        9: 'altro ',
+        pd.NA:"Non risponde"
+        },
+    'D2b' : {
+        1:'Da mio figlio/a, nipote',
+        2: 'Da amici/parenti',
+        3: 'Attraverso Internet',
+        4: 'Da un pieghevole/locandina',
+        5: 'Da un articolo su una rivista/giornale',
+        6: 'Dalla radio/TV ',
+        7: 'Casualmente, passando davanti al Museo',
+        8: 'Conoscevo già il Museo',
+        9: 'Altro ',
+        pd.NA:"Non risponde"
+        },
+    'D2c' : {
+        1:'Da mio figlio/a, nipote',
+        2: 'Da amici/parenti',
+        3: 'Attraverso Internet',
+        4: 'Da un pieghevole/locandina',
+        5: 'Da un articolo su una rivista/giornale',
+        6: 'Dalla radio/TV ',
+        7: 'Casualmente, passando davanti al Museo',
+        8: 'Conoscevo già il Museo',
+        9: 'Altro ',
+        pd.NA:"Non risponde"
+        },
+    'D3' :  {
+        1: 'gruppo',
+        2: 'solo',
+        3: 'coppia',
+        4: 'figli',
+        5: 'amici',
+        pd.NA:"Non risponde"
+    },
+    'D4a' :  {
+        1: 'raccolta',
+        2: 'turistica',
+        3: 'studio',
+        4: 'accompagnare',
+        5: 'mostra',
+        6: 'tempo libero',
+        7: 'docente',
+        9: 'altro',
+        pd.NA:"Non risponde"
+    },
+    'D4b' :  {
+        1: 'Interesse specifico sulla raccolta',
+        2: 'Come parte di una visita turistica nella zona/città',
+        3: 'Interesse di studio/professionale',
+        4: 'Per accompagnare amici/conoscenti',
+        5: 'Per visitare una mostra o partecipare ad una iniziativa in corso',
+        6: 'Per trascorrere del tempo libero',
+        7: 'Docente di una classe in visita',
+        9: 'Altro',
+        pd.NA:"Non risponde"
+    },
+    'D4c' :  {
+        1: 'Interesse specifico sulla raccolta',
+        2: 'Come parte di una visita turistica nella zona/città',
+        3: 'Interesse di studio/professionale',
+        4: 'Per accompagnare amici/conoscenti',
+        5: 'Per visitare una mostra o partecipare ad una iniziativa in corso',
+        6: 'Per trascorrere del tempo libero',
+        7: 'Docente di una classe in visita',
+        9: 'Altro',
+        pd.NA:"Non risponde"
+    },
+    'D5' :  {
+        1:'provincia',
+        2:'Italia',
+        3:'estero',
+        pd.NA:"Non risponde"
+    },
+    'D6':   {
+        1:"Maschio",
+        2:"Femmina",
+        "All":'Totale', 
+        pd.NA:"Non risponde"
+    },
+    'D7':   {
+        1:"Meno di 18",
+        2:"Tra 18 e 30",
+        3:"Tra 31 e 45",
+        4:"Tra 46 e 65",
+        5:"Più di 65",
+        "All":'Totale',
+        pd.NA:"Non risponde"
+    }, 
+    'D8' : {
+    1: 'Elementare',
+    2: 'Medie inferiori',
+    3: 'Diploma medie superiori',
+    4: 'Laurea o titoli post-laurea',
+    5: 'Nessuno',
+    pd.NA:"Non risponde"
+    },
+    'D9' : {
+    1:'< 30mm',
+    2:'30mm-1ora',
+    3:'1-2ore',
+    4:'+2ore',
     pd.NA:"Non risponde"  
     },
     'D10' : {
