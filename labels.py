@@ -19,7 +19,7 @@ domande = {
     'D12' : 'Se ha avuto modo di seguire una visita guidata alla mostra, come si ritiene soddisfatto della visita guidata ?',
     'D13' : 'Se ha avuto modo di seguire una visita guidata alla mostra, come si ritiene soddisfatto della cortesia e competenza del personale ?',
     'D14' : 'Quale è il tema della mostra CONFINI che ha trovato di maggior interesse',
-    'D15' : 'Quale è il tema/parola chiave della mostra CONFINI che è rimasto più impresso',
+    'D15' : 'Quale è il tema parola chiave della mostra CONFINI che è rimasto più impresso',
     'D16' : 'Altre osservazioni e suggerimenti'
     }
 

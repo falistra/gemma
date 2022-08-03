@@ -18,12 +18,20 @@ def ff(x):
 analytics = open('./public/analytics.html','w',encoding='utf-8')
 analytics.write("""
 <meta charset="UTF-8">
-Fra le seguenti coppie di domande può  essere rifiutata l'ipotedi di indipendenza H0\n
-Con una probabilità  di commettere errore minore di...
+Fra le seguenti coppie di domande <B>può essere rifiutata l'ipotesi di indipendenza H0</B> <BR/>
+A favore dell'ipotesi alternativa di un legame, <BR/>
+con una probabilità  di commettere errore minore di...
+<HR>
 """)
 
-for var_riga in ['D5','D6','D7','D8']:
-    for var_col in ['D2a','D3','D4a','D9','D10','D11','D12','D13']:
+#for var_riga in ['D5','D6','D7','D8']:
+#    for var_col in ['D2a','D3','D4a','D9','D10','D11','D12','D13']:
+
+for var_riga in ['D5','D6','D7','D8','D2a','D3','D4a','D9','D10','D11','D12','D13']:
+    for var_col in ['D5','D6','D7','D8','D2a','D3','D4a','D9','D10','D11','D12','D13']:
+        if var_col == var_riga:
+            continue
+
         tables_html = []
 
         valori_assoluti = pd.crosstab(df[var_riga], df[var_col],margins=True,margins_name='Totale')
@@ -49,7 +57,7 @@ for var_riga in ['D5','D6','D7','D8']:
         valori_assoluti_graph = pd.crosstab(df[var_riga], df[var_col])
         valori_assoluti_graph.rename(columns=labels.risposte_short[var_col], index=labels.risposte_short[var_riga], inplace = True)
         sns.heatmap(valori_assoluti_graph, annot=True, cmap="YlGnBu")
-        plt.savefig(f'./public/{img_file}')
+        plt.savefig(f'./public/incroci/{img_file}')
         plt.close()
 
         # Chi-square test of independence. 
@@ -58,6 +66,7 @@ for var_riga in ['D5','D6','D7','D8']:
             non = ''
             msg = f'''
             {p:0.2} - "{labels.domande[var_riga]} ({var_riga})" <=> "{labels.domande[var_col]} ({var_col})"
+            <BR/>
             '''
             analytics.write(msg)
 
@@ -91,7 +100,7 @@ for var_riga in ['D5','D6','D7','D8']:
             </div>
         ''')
 
-        with open(f'./public/{labels.domande[var_riga]}_X_{labels.domande[var_col]}.html','w') as f:
+        with open(f'./public/incroci/{labels.domande[var_riga]}_X_{labels.domande[var_col]}.html','w') as f:
             styles = '''
             table.dataframe > tbody > tr > th {
                 text-align: left;

@@ -10,8 +10,6 @@ def label_values(d,labels):
 
 df = getData()
 
-tables_html = []
-
 for D in ['D1','D2a','D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13']: # ,'D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13']:
 #for D in ['D2a']: # ,'D2a','D2b','D2c','D3','D4a','D4b','D4c','D5','D6','D7','D8','D9','D10','D11','D12','D13']: # ,'D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13']:
     data = df[D]
@@ -27,7 +25,7 @@ for D in ['D1','D2a','D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13'
     img_file = f'{D}.jpg'
     
     table = stat.to_html(float_format=ff)
-    tables_html.append(f'''
+    table_html = f'''
         <DIV class="testo_domanda">{labels.domande[D]}
         </DIV>
         <DIV style="float:left; display:block;">
@@ -35,7 +33,7 @@ for D in ['D1','D2a','D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13'
         </DIV>
         <DIV style="float:left;" > <IMG src='{img_file}'> </DIV>
         <div style="clear:both;"></div> 
-    ''')
+    '''
 
     plt.figure()
 
@@ -44,7 +42,7 @@ for D in ['D1','D2a','D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13'
     plt.savefig(f'./public/frequenze semplici/{img_file}')
     plt.close()
 
-    with open(f'./public/frequenze semplici/Frequenze.html','w') as f:
+    with open(f'./public/frequenze semplici/{labels.domande[D]}.html','w') as f:
         styles = '''
         table.dataframe > tbody > tr > th {
             text-align: left;
@@ -89,7 +87,7 @@ for D in ['D1','D2a','D3','D4a','D5','D6','D7','D8','D9','D10','D11','D12','D13'
             <div>Frequenze semplici delle risposte alle domande del questionario</div>
             <div>(Nei grafici sono escluse le mancate risposte)</div>
             <HR>
-            {'<HR>'.join(tables_html)}
+            {table_html}
         </body>
         </html>
         '''
